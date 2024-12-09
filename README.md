@@ -4,50 +4,57 @@ Ce dépôt a été créé à des fins pédagogiques. Il permet de s'entraîner �
 
 ## Comment débuter le travail
 
-Il s'agit de la suite de la première évaluation. Comme vous le verrez à la tâche "03", vous pourrez soit choisir de continuer sur votre code, soit reprendre ce dépôt.
+Précédemment nous avons intégré la classe "MathRequest" permettant de regrouper dans une même structure les différentes variables définissant un calcul.
+
+Pour cette étape, il s'agit de continuer de faire évoluer l'architecture en retirant la logique mathématique actuellement présente dans le main, pour la disposer dans une classe dédiée au xmathématiques.
 
 ## Backlog
-### Tâche 01 - Identifier les futurs objets
-
-Prenez le temps de bien comprendre l'exemple de code livré dans la théorie (vehicle and driver) et tentez d'identifier les objets dont nous aurions besoin pour modéliser correctement la calculatrice.
-
-* [Lien avec le gitbook](https://cpnv-cfc.gitbook.io/i319-concevoir-et-implementer-des-applications/semaines-4-8/theorie-et-concepts/introduction-a-la-poo)
-
-### Tâche 02 - Dessiner le diagramme de classe
-
-Voir le commit présentant la différence d'architecture avant et après le MathRequest.
-
-* [Comparaison avant et après le MathRequest](https://github.com/CPNV-CFC-I319/Eval1-Calculator/commit/eb5c798fe5ca40c2fb7b278e83a99f71fb0c07ea)
-
-Etat de l'architecture pour l'implémentation d'une classe "MathRequest"
+### Tâche 01 - Etudier le diagramme de classes
 
 ![classDiagramWithMathRequest](docs/class_diagram.png)
 
-## Tâche 03 - Récupérer/Préparer votre projet
+Identifiez les différentes relations entre main, MathRequest et MathLib.
 
-Avant de partir la "tête la première", il est important d'avoir une bonne stratégie de branche et d'enrichir petit à petit votre code.
-Vous pouvez soit partir du code actuel, soit partir de ce dépôt:
+Observez également l'architecture de chacune des classes.
 
-* Soit vous décider de "re-forker-cloner" ce dépôt, et initaliser git-flow.
-* Soit vous pouvez continuer sur votre code. Prenez bien soin de détecter les éventuelles différences que vous avez avec cette version du projet.
+### Tâche 02 - Prendre en main le code de départ
 
-Comme vous pouvez le voir, la modification de l'architecture (le diagramme de classe) a été réalisée sur la branche _develop_. Il est important d'être sur cette branche avant de continuer le travail.
+L'état du projet actuel est le suivant:
+* La classe de test "testMathLib" est prête pour le développement. En lançant la série de test vous devirez avoir ce résultat.
 
-## Tâche 04 - Créer la branche "feature/MathRequest"
+![testStateMathLib.png](docs/TestStateMathLib.png)
 
-Il s'agit maintenant d'implémenter cette modification sur la branche du nom de "feature/MathRequest".
+## Tâche 03 - Enrichissement fonctionnel de la méthode "execute"
 
-* [Documentation de référence pour gitflow](https://cpnv-cfc.gitbook.io/i319-concevoir-et-implementer-des-applications/semaines-4-8/theorie-et-concepts/git-flow)
+En vous concentrant sur chaque cas de tests séparemment, enrichissez la méthode "execute" de MathLib.
+
+Votre branche feature "MathLib" devrait contenir la liste des commits suivants:
+
+1. "feat: add impl"
+2. "feat: sub impl"
+
+et ainsi de suite pour toutes les opérations.
+
+Si vous détecter des erreurs, utiliser des commits de type "fix:".
+
+## Tâche 04 - Adapter le "main" pour qu'il exploite la nouvelle classe "MathLib"
+
+Une fois que votre classe "MathLib" passe tous les tests, vous pouvez l'intégrer au "main".
+
+Ceci fait, vous pourrez clore la branche feature/MathLib comme suit:
 
 ```
-   git flow feature start MathRequest
+   git flow feature finish MathLib
 ```
 
-Regardez l'architecture imposée et tentez de réussir à faire fonctionner votre calculatrice, avec l'implémentation de MathRequest.
+## Tâche 05 - Etat final
 
-1) débutez par écrire la classe de test
-2) adapter l'architecture de votre projet pour pouvoir "run" les tests
-3) "failed" les tests
-4) coder le comportement de la classe ciblée par les tests
-5) faire passer les tests
-6) refactoriser si besoin
+En local, vous ne devriez avoir plus que deux branches, la "develop" et la "main".
+A distantce, vérifiez également que vous n'avez bien le même état.
+
+Une session de test "manuelle" à l'aide de la console permet de valider que toutes les opérations fonctionnent (sans gestion d'exception).
+Une session de test "automatique" à l'aide des classes de tests vous permet de valider que le code répond aux exigences.
+
+Soignez votre code, relisez-le attentivement en vous aider des informations émises par votre IDE.
+
+Si vous apportez des améliorations, faites-le directement dans la branche develop.
