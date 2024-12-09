@@ -7,11 +7,11 @@ from src.MathRequest import MathRequest
 class TestMathLib(unittest.TestCase):
 
     def setUp(self):
-        mathLib = MathLib()
+        pass
 
     def test_execute_add_get_result(self):
         #given
-        mathRequest = MathRequest(3, '+', 4)
+        mathRequest = MathRequest(3, 'add', 4)
 
         #when
         MathLib.execute(mathRequest)
@@ -21,7 +21,7 @@ class TestMathLib(unittest.TestCase):
 
     def test_execute_sub_get_result(self):
         # given
-        mathRequest = MathRequest(3, '-', 4)
+        mathRequest = MathRequest(3, 'sub', 4)
 
         # when
         MathLib.execute(mathRequest)
@@ -31,7 +31,7 @@ class TestMathLib(unittest.TestCase):
 
     def test_execute_mul_get_result(self):
         # given
-        mathRequest = MathRequest(3, '*', 4)
+        mathRequest = MathRequest(3, 'mul', 4)
 
         # when
         MathLib.execute(mathRequest)
@@ -41,7 +41,7 @@ class TestMathLib(unittest.TestCase):
 
     def test_execute_div_get_result(self):
         # given
-        mathRequest = MathRequest(3, '/', 4)
+        mathRequest = MathRequest(3, 'div', 4)
 
         # when
         MathLib.execute(mathRequest)
@@ -51,17 +51,17 @@ class TestMathLib(unittest.TestCase):
 
     def test_execute_pow_get_result(self):
         # given
-        mathRequest = MathRequest(3, '^', 81)
+        mathRequest = MathRequest(3, 'pow', 4)
 
         # when
         MathLib.execute(mathRequest)
 
         # then
-        self.assertEqual(mathRequest.get_res(), )
+        self.assertEqual(mathRequest.get_res(), 81)
 
     def test_execute_root_get_result(self):
         # given
-        mathRequest = MathRequest(3, '**', 4)
+        mathRequest = MathRequest(3, 'root', 4)
 
         # when
         MathLib.execute(mathRequest)
