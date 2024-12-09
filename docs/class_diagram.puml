@@ -15,6 +15,10 @@ class MathRequest{
  + <get, set>result():float
 }
 
+class MathLib{
+ + calculate(MathRequest: mathRequest):void
+}
+
 class main{
  -mathRequest:MathRequest
 
@@ -26,5 +30,7 @@ class main{
 }
 
 main .-> MathRequest
+MathLib .-> MathRequest
+main .-> MathLib
 
 @enduml
