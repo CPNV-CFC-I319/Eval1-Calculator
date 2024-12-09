@@ -25,7 +25,7 @@ class main{
  +main():void
  -ask_user_input():MathRequest
  -calculate(MathRequest:mathRequest):void
- -display_result(MatRequest:mathRequest):void
+ -display_result(MathRequest:mathRequest):void
  -ask_user_float_input(string:message):float
 }
 
