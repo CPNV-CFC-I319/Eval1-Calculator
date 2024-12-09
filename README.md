@@ -35,7 +35,7 @@ Votre branche feature "MathLib" devrait contenir la liste des commits suivants:
 
 et ainsi de suite pour toutes les opérations.
 
-Si vous détecter des erreurs, utiliser des commits de type "fix:".
+Si vous détectez des erreurs, utiliser des commits de type "fix:".
 
 ## Tâche 04 - Adapter le "main" pour qu'il exploite la nouvelle classe "MathLib"
 
