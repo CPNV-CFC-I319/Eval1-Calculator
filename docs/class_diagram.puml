@@ -16,7 +16,7 @@ class MathRequest{
 }
 
 class MathLib{
- + calculate(MathRequest: mathRequest):void
+ + execute(MathRequest: mathRequest):void
 }
 
 class main{
