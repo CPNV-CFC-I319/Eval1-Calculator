@@ -9,3 +9,7 @@ class MathLib:
         if(oper == 'add'):
             res = ope1 + ope2
             mathRequest.set_res(res)
+
+        if (oper == 'div'):
+            res = ope1 / ope2
+            mathRequest.set_res(res)
