@@ -11,7 +11,7 @@ Pour cette étape, il s'agit de continuer de faire évoluer l'architecture en re
 ## Backlog
 ### Tâche 01 - Etudier le diagramme de classes
 
-![classDiagramWithMathLib](docs/class_diagram.png)
+![classDiagramAddingMathLib](docs/class_diagram.png)
 
 Identifiez les différentes relations entre main, MathRequest et MathLib.
 
